@@ -2,127 +2,247 @@
 //Supported Libraries imported 
 
 import java.awt.event.ActionListener;
+
 import java.awt.event.ActionEvent;
+
 import javax.swing.JButton;
+
 import java.util.Stack;
+
 import javax.swing.text.BadLocationException;
+
 import javax.swing.text.DefaultHighlighter;
+
 import javax.swing.text.Highlighter;
+
 import javax.swing.text.Highlighter.HighlightPainter;
+
 import javax.swing.text.JTextComponent;
+
 import java.awt.Color;
+
 //Class defination with parent class Jframe and implememtation of ActionListener for buttons
+
 public class calculatorClass extends javax.swing.JFrame implements ActionListener {
+
     //Defination of Buttons 
+   
     private javax.swing.JButton backspace;
+    
     private javax.swing.JButton cal0;
+    
     private javax.swing.JButton cal1;
+    
     private javax.swing.JButton cal2;
+    
     private javax.swing.JButton cal3;
+    
     private javax.swing.JButton cal4;
+    
     private javax.swing.JButton cal5;
+    
     private javax.swing.JButton cal6;
+    
     private javax.swing.JButton cal7;
+    
     private javax.swing.JButton cal8;
+    
     private javax.swing.JButton cal9;
+    
     private javax.swing.JButton calDivide;
+    
     private javax.swing.JButton calDot;
+    
     private javax.swing.JButton calEqual;
+    
     private javax.swing.JButton calFactorial;
+    
     private javax.swing.JLabel calHeading;
+    
     private javax.swing.JButton calMinus;
+    
     private javax.swing.JButton calMultiply;
+    
     private javax.swing.JButton calPlus;
+    
     private javax.swing.JTextField calTextBox;
+    
     private javax.swing.JButton clear;
+    
     private javax.swing.JButton exit;
+    
     private javax.swing.JButton extra;
+    
     private javax.swing.JButton leftParenthesis;
+    
     private javax.swing.JButton rightParenthesis;
+    
     //DATA memebers
+    
     private int index=0;
+    
     //Constructor
+    
     public calculatorClass() {
+    
         //Draw UI
+        
         initComponents();
+        
         //Set Action Commnads
+        
         cal1.setActionCommand("1");
+        
         cal2.setActionCommand("2");
+        
         cal3.setActionCommand("3");
+        
         cal4.setActionCommand("4");
+        
         cal5.setActionCommand("5");
+        
         cal6.setActionCommand("6");
+        
         cal7.setActionCommand("7");
+        
         cal8.setActionCommand("8");
+        
         cal9.setActionCommand("9");
+        
         cal0.setActionCommand("0");
+        
         calPlus.setActionCommand("+");
+        
         calMinus.setActionCommand("-");
+        
         calMultiply.setActionCommand("*");
+        
         calDivide.setActionCommand("/");
+        
         calFactorial.setActionCommand("!");
+        
         backspace.setActionCommand("bk");
+        
         clear.setActionCommand("clr");
+        
         rightParenthesis.setActionCommand("rightP");
+        
         leftParenthesis.setActionCommand("leftP");
+        
         calEqual.setActionCommand("=");
+        
         exit.setActionCommand("exit");
+        
         //Set ActionListeners to buttons
+        
         cal1.addActionListener(this);
+        
         cal2.addActionListener(this);
+        
         cal3.addActionListener(this);
+        
         cal4.addActionListener(this);
+        
         cal5.addActionListener(this);
+        
         cal6.addActionListener(this);
+        
         cal7.addActionListener(this);
+        
         cal8.addActionListener(this);
+        
         cal9.addActionListener(this);
+        
         cal0.addActionListener(this);
+        
         calPlus.addActionListener(this);
+        
         calMinus.addActionListener(this);
+        
         calMultiply.addActionListener(this);
+        
         calDivide.addActionListener(this);
+        
         calFactorial.addActionListener(this);
+        
         backspace.addActionListener(this);
+        
         clear.addActionListener(this);
+        
         rightParenthesis.addActionListener(this);
+        
         leftParenthesis.addActionListener(this);
+        
         calEqual.addActionListener(this);
+        
         exit.addActionListener(this);
     }
+    
     //Main Method
+    
     public static void main(String[] args) {
+    
         // TODO code application logic here
+        
         calculatorClass clas=new calculatorClass();
+        
         clas.setVisible(true);
     }
+    
     //Draw UI
+    
     private void initComponents() {
+    
         //Initoalize Buttons/ Controls
+        
         calHeading = new javax.swing.JLabel();
+        
         calTextBox = new javax.swing.JTextField();
+        
         cal1 = new javax.swing.JButton();
+        
         cal2 = new javax.swing.JButton();
+        
         cal3 = new javax.swing.JButton();
+        
         calPlus = new javax.swing.JButton();
+        
         backspace = new javax.swing.JButton();
+        
         cal4 = new javax.swing.JButton();
+        
         cal5 = new javax.swing.JButton();
+        
         cal6 = new javax.swing.JButton();
+        
         calMinus = new javax.swing.JButton();
+        
         clear = new javax.swing.JButton();
+        
         cal8 = new javax.swing.JButton();
+        
         cal7 = new javax.swing.JButton();
+        
         rightParenthesis = new javax.swing.JButton();
+        
         calMultiply = new javax.swing.JButton();
+        
         cal9 = new javax.swing.JButton();
+        
         cal0 = new javax.swing.JButton();
+        
         extra = new javax.swing.JButton();
+        
         leftParenthesis = new javax.swing.JButton();
+        
         calDivide = new javax.swing.JButton();
+        
         calDot = new javax.swing.JButton();
+        
         calEqual = new javax.swing.JButton();
+        
         calFactorial = new javax.swing.JButton();
+        
         exit = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
